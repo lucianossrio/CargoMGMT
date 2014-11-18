@@ -1,0 +1,26 @@
+<div ng-controller="cargoController">
+<form ng-submit="addCargo()">
+<table>
+	<tr>
+		<td>Name:</td>
+		<td><input type="text" ng-model="name" required/></td>
+	</tr>
+	<tr>
+		<td>Description:</td>
+		<td><input type="text" ng-model="description" /></td>
+	</tr>
+	<tr>
+		<td>Shipping Date:</td>
+		<td><input type="datetime-local" ng-model="shippingDate" required/></td>
+	</tr>
+	<tr>
+		<td>Arrival Date:</td>
+		<td><input type="datetime-local" ng-model="arrivalDate" /></td>
+	</tr>
+	<tr>
+		<td><br />
+		<input type="submit" value="Add New Cargo"/></td>
+	</tr>
+</table>
+</form>
+</div>

@@ -1,0 +1,19 @@
+<div ng-controller="cargoController">
+	<a ng-href="#/new">+</a>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>name</th>
+			<th>description</th>
+			<th>shipping date</th>
+			<th>arrival date</th>
+		</tr>
+		<tr ng-repeat="cargo in cargoes">
+			<td>{{cargo.id}}</td>
+			<td>{{cargo.name}}</td>
+			<td>{{cargo.description}}</td>
+			<td>{{cargo.shippingDate | date: 'dd/MM/yyyy - HH:mm:ss'}}</td>
+			<td>{{cargo.arrivalDate | date: 'dd/MM/yyyy - HH:mm:ss'}}</td>
+		</tr>
+	</table>
+</div>

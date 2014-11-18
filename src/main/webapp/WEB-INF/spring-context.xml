@@ -17,6 +17,7 @@
 	<tx:annotation-driven/>
 	
 	<mvc:resources mapping="/resources/**" location="/resources/theme/" />
+	<mvc:resources mapping="/static/**" location="/WEB-INF/"/>
 
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
