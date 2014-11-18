@@ -7,8 +7,9 @@ import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.luciano.cargomgmt.modelo.Cargo;
+import com.luciano.cargomgmt.model.Cargo;
 
 @Repository
 public class CargoDAO {
@@ -16,8 +17,9 @@ public class CargoDAO {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public void salvar(Cargo cargo) {
-		if (cargo.getId() != null) {
+	@Transactional
+	public void save(Cargo cargo) {
+		if (cargo.getId() == null) {
 			this.manager.persist(cargo);
 		} else {
 			this.manager.merge(cargo);
